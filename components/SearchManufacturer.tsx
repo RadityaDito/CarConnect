@@ -23,7 +23,7 @@ const SearchManufacturer = ({
         );
 
   return (
-    <div className="search-manufacturer">
+    <div className="flex-1 max-sm:w-full flex justify-start items-center">
       <Combobox value={manufacturer} onChange={setManuFacturer}>
         <div className="relative w-full">
           {/* Button for the combobox. Click on the icon to see the complete dropdown */}
@@ -39,7 +39,7 @@ const SearchManufacturer = ({
 
           {/* Input field for searching */}
           <Combobox.Input
-            className="search-manufacturer__input"
+            className="w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-light-white outline-none cursor-pointer text-sm"
             displayValue={(item: string) => item}
             onChange={(event) => setQuery(event.target.value)} // Update the search query when the input changes
             placeholder="Volkswagen..."
@@ -54,7 +54,7 @@ const SearchManufacturer = ({
             afterLeave={() => setQuery("")} // Reset the search query after the transition completes
           >
             <Combobox.Options
-              className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+              className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-20"
               static
             >
               {filteredManufacturers.length === 0 && query !== "" ? (
