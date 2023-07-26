@@ -35,8 +35,8 @@ export default async function Home({ searchParams }: HomeProps) {
           <SearchBar />
 
           <div className="flex gap-2 items-center ">
-            <CustomFilter title="Fuel" options={fuels} />
-            <CustomFilter title="Year" options={yearsOfProduction} />
+            <CustomFilter title="fuel" options={fuels} />
+            <CustomFilter title="year" options={yearsOfProduction} />
           </div>
         </div>
 
@@ -51,7 +51,7 @@ export default async function Home({ searchParams }: HomeProps) {
         ) : (
           <div className="text-center mt-16 flex flex-col gap-2">
             <h2 className="font-bold text-black text-xl">Oops, no results</h2>
-            <p>{allCars?.message ? allCars.message : "Too Many Request"}</p>
+            <p>{allCars?.message ? allCars.message : ""}</p>
           </div>
         )}
       </div>
