@@ -4,5 +4,14 @@ import Footer from "./Footer";
 import Hero from "./Hero";
 import SearchManufacturer from "./SearchManufacturer";
 import CarCard from "./CarCard";
+import ShowMore from "./ShowMore";
 
-export { Navbar, CustomButton, Footer, Hero, SearchManufacturer, CarCard };
+export {
+  Navbar,
+  CustomButton,
+  Footer,
+  Hero,
+  SearchManufacturer,
+  CarCard,
+  ShowMore,
+};

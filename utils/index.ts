@@ -1,15 +1,5 @@
 import { CarProps, FilterProps } from "@/types";
 
-const options = {
-  method: "GET",
-  url: "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars",
-  params: { model: "corolla" },
-  headers: {
-    "X-RapidAPI-Key": "98e05ab1a8msh36e321d2ac4096cp1a7f8cjsnbefb2e762d5a",
-    "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
-  },
-};
-
 export const fetchCars = async (filters: FilterProps) => {
   const { manufacturer, year, model, limit, fuel } = filters;
 

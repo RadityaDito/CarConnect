@@ -1,4 +1,4 @@
-import { CarCard, Hero } from "@/components";
+import { CarCard, Hero, ShowMore } from "@/components";
 import CustomFilter from "@/components/CustomFilter";
 import SearchBar from "@/components/SearchBar";
 import { fuels, yearsOfProduction } from "@/constants";
@@ -54,6 +54,11 @@ export default async function Home({ searchParams }: HomeProps) {
             <p>{allCars?.message ? allCars.message : ""}</p>
           </div>
         )}
+
+        <ShowMore
+          isNext={(searchParams.limit || 10) > allCars.length}
+          pageNumber={(searchParams.limit || 10) / 10}
+        />
       </div>
     </div>
   );
